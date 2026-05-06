@@ -6,7 +6,7 @@ exports.getClients = async (req, res) => {
     const clients = await Client.find({ user: req.user.id }).sort({ createdAt: -1 });
     res.json(clients);
   } catch (err) {
-    res.status(500).json({ message: 'Server error' });
+    res.status(520).json({ message: 'Server error' });
   }
 };
 
